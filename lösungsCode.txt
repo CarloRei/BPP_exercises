@@ -1,0 +1,314 @@
+Aufgabe 2 (Z. 3)
+
+#include <iostream>
+using namespace std;
+ 
+int main() 
+{
+    cout << "\n\n Find Size of fundamental data types :\n";
+	cout << "------------------------------------------\n";
+   cout << " The sizeof(char) is :          " << sizeof(char) << " bytes \n" ;
+   cout << " The sizeof(short) is :         " << sizeof(short) << " bytes \n" ;
+   cout << " The sizeof(int) is :           " << sizeof(int) << " bytes \n" ;
+   cout << " The sizeof(long) is :          " << sizeof(long) << " bytes \n" ;
+   cout << " The sizeof(long long) is :     " << sizeof(long long) << " bytes \n";
+   cout << " The sizeof(float) is :         " << sizeof(float) << " bytes \n" ;
+   cout << " The sizeof(double) is :        " << sizeof(double) << " bytes \n";
+   cout << " The sizeof(long double) is :   " << sizeof(long double) << " bytes \n";
+   cout << " The sizeof(bool) is :          " << sizeof(bool) << " bytes \n\n";
+   return 0;
+}
+Ausgabe: 
+The sizeof(char) is : 1 bytes
+The sizeof(short) is : 2 bytes
+The sizeof(int) is : 4 bytes
+The sizeof(long) is : 8 bytes
+The sizeof(long long) is : 8 bytes
+The sizeof(float) is : 4 bytes
+The sizeof(double) is : 8 bytes
+The sizeof(long double) is : 16 bytes
+The sizeof(bool) is : 1 bytes
+
+---------------------------------------------------------
+Aufgabe 5.
+
+
+#include <iostream>
+#include <climits>   // integer limits in header file
+using namespace std;
+ 
+int main() 
+{
+    cout << "\n\n Check the upper and lower limits of integer :\n";
+	cout << "--------------------------------------------------\n";
+	cout << " The maximum limit of int data type :                  " << INT_MAX << endl;
+	cout << " The minimum limit of int data type :                  " << INT_MIN << endl;
+	cout << " The maximum limit of unsigned int data type :         " << UINT_MAX << endl;
+	cout << " The maximum limit of long long data type :            " << LLONG_MAX << endl;
+	cout << " The minimum limit of long long data type :             " << LLONG_MIN << endl;
+	cout << " The maximum limit of unsigned long long data type :   " << ULLONG_MAX << endl;
+	cout << " The Bits contain in char data type :                  " << CHAR_BIT << endl;
+	cout << " The maximum limit of char data type :                 " << CHAR_MAX << endl;
+	cout << " The minimum limit of char data type :                 " << CHAR_MIN << endl;
+	cout << " The maximum limit of signed char data type :          " << SCHAR_MAX << endl;
+	cout << " The minimum limit of signed char data type :          " << SCHAR_MIN << endl;
+	cout << " The maximum limit of unsigned char data type :        " << UCHAR_MAX << endl;
+	cout << " The minimum limit of short data type :                " << SHRT_MIN << endl;
+    cout << " The maximum limit of short data type :                " << SHRT_MAX << endl;
+    cout << " The maximum limit of unsigned short data type :       " << USHRT_MAX << endl;
+   cout << endl;
+   return 0;
+}
+Ausgabe:
+The maximum limit of int data type : 2147483647
+The minimum limit of int data type : -2147483648
+The maximum limit of unsigned int data type : 4294967295
+The maximum limit of long long data type : 9223372036854775807
+The minimum limit of long long data type : -9223372036854775808
+The maximum limit of unsigned long long data type : 18446744073709551615
+The Bits contain in char data type : 8
+The maximum limit of char data type : 127
+The minimum limit of char data type : -128
+The maximum limit of signed char data type : 127
+The minimum limit of signed char data type : -128
+The maximum limit of unsigned char data type : 255
+The minimum limit of short data type : -32768
+The maximum limit of short data type : 32767
+The maximum limit of unsigned short data type : 65535
+
+
+--------------------------------------------------------------------------
+Aufgabe 7
+
+
+#include <iostream>
+
+using namespace std;
+int test(int x, int y)
+{
+    int digit_sum = 0;
+    for(int i = x; i <= y; ++i)
+    {
+        int p = i;
+        while(p > 0)
+        {
+            digit_sum += p % 10;
+            p /= 10;
+        }
+    }
+    return digit_sum;
+}
+
+int main() {
+   //int n1 = 5;
+   //int n2 = 9;
+   //int n1 = 12;
+   //int n2 = 18;
+   int n1 = 39;
+   int n2 = 41;
+   cout << "Add up all the digits between " << n1 << " and " << n2 << " is: ";
+   cout << test(n1, n2) << endl;
+}
+
+
+-----------------------------------------------------------------------------
+Aufgabe 8 
+
+
+//C++ program to calculate arithmetic mean
+#include<iostream>
+using namespace std;
+int main()
+{
+        float arr[50], sum=0, mean=0; 
+		int number, i; 
+        cout<<"Enter total number in a series? ";
+        cin>>number;
+        cout<<"Enter "<<number<<" Numbers:\n";
+        for(i=0; i<number; i++)
+        {
+                cin>>arr[i];
+                sum=sum+arr[i];
+        }
+                mean=sum/number;
+        cout<<"Arithmetic Mean = "<<mean;
+        return 0;
+}
+
+------------------------------------------------------------------------------
+
+Aufgabe 9 
+
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    int n, num = 0, i;
+    cout << "\n\n Print a number in words:\n";
+    cout << "-----------------------------\n";
+    cout << " Input any number: ";
+    cin >> n;
+    while (n != 0) {
+        num = (num * 10) + (n % 10);
+        n /= 10;
+    }
+    for (i = num; i > 0; i = i / 10) {
+
+        switch (i % 10) {
+        case 0:
+            cout << "Zero ";
+            break;
+        case 1:
+            cout << "One ";
+            break;
+        case 2:
+            cout << "Two ";
+            break;
+        case 3:
+            cout << "Three ";
+            break;
+        case 4:
+            cout << "Four ";
+            break;
+        case 5:
+            cout << "Five ";
+            break;
+        case 6:
+            cout << "Six ";
+            break;
+        case 7:
+            cout << "Seven ";
+            break;
+        case 8:
+            cout << "Eight ";
+            break;
+        case 9:
+            cout << "Nine ";
+            break;
+        }
+    }
+    cout << endl;
+}
+
+
+
+
+--------------------------------------------
+Aufgabe 10:
+
+
+Vorlage: 
+int x {};
+
+cout<<"Enter number: "<<endl;
+/*enter Code here*/
+
+
+
+Lösung:
+int x {};
+
+cout<<"Enter number: "<<endl;
+cin>> x ;
+---------------------------------------------
+
+Aufgabe 11
+Vorlage:
+int x, y;
+int sum;
+cout << "Type a number: ";
+/* enter code here*/
+;
+cout << "Type another number: ";
+ /*enter code*/
+;
+sum = x + y;
+cout << "Sum is: " << /*Enter code here*/
+;
+
+----------------------------------------------
+
+Aufgabe 12
+Vorlage
+/* */
+int y = 10;
+cout << x + y;
+
+Lösung:
+int x = 5;
+int y = 10;
+cout << x+y<<endl<<flush;
+---------------------------------------------
+
+Aufgabe 13:
+Vorlage:
+int x = 5;
+int y = 10;
+/*Enter Code*/
+
+Lösung
+int x = 5;
+int y = 10;
+int z = x+y;
+cout<< z<<endl<<flush;
+
+----------------------------------
+Aufgabe 14:
+
+Vorlage 
+
+/*Fill in the correct parts*/
+/**/x = 5 /**/ y = 6 /**/ z = 50;
+cout << x + y + z<<endl<<flush;
+
+Lösung 
+int x = 5, y = 6, z = 50;
+cout<< x + y + z <<endl;
+
+--------------------------------
+Aufgabe 15:
+
+/*Enter Datatype*/ myNum = 9;
+/*Enter Datatype*/ myDoubleNum = 8.99;
+/*Enter Datatype*/ myLetter = 'A';
+/*Enter Datatype*/ myBool = false;
+/*Enter Datatype*/ myText = "Hello World";
+
+
+Lösung :
+int myNum = 9;
+double myDoubleNum = 8.99;
+char myLetter = 'A';
+bool myBool = false;
+string myText = "Hello World";
+-----------------------------------------
+
+
+Aufgabe 22:
+Vorlage:
+string firstName = "John ";
+string lastName = "Doe";
+cout << firstName/**/ lastName;
+
+Lösung
+string firstName = "John ";
+string lastName = "Doe";
+cout << firstName + lastName;
+-----------------------------------------
+Aufgabe 26:
+
+Vorgabe: 
+
+string fullName;
+cout<<"Type your full name: ";
+/*Ente code here*/;
+cout<< "Your name is: "<<fullName<< endl<<flush;
+
+Lösung:
+string fullName;
+cout<< "Type your full name: ";
+getline(cin, fullName);
+cout<< "Your name is: "<< fullName<<endl<<flush;
+
+
