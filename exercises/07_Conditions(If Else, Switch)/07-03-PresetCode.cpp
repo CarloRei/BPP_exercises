@@ -6,9 +6,13 @@ int main(){
 
 int x = 50;
 int y = 10;
-if( x<y)
+/**/( x/**/y)
 {
-  cout<<"Hello World"<<endl;
+  cout<<"Yes"<<endl;
+}
+/**/
+{
+  cout << "No"<<endl;
 }
 
   return 0;

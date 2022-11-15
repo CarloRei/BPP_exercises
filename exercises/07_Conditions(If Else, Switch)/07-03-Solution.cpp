@@ -6,9 +6,12 @@ int main(){
 
 int x = 50;
 int y = 10;
-if( x<y)
+if( x==y)
 {
-  cout<<"Hello World"<<endl;
+  cout<<"Yes"<<endl;
+}else
+{
+  cout<<"No"<<endl;
 }
 
   return 0;

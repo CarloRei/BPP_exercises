@@ -8,7 +8,15 @@ int x = 50;
 int y = 10;
 /**/( x/**/y)
 {
-  cout<<"Hello World"<<endl;
+  cout<<"1"<<endl;
+}
+/**/ (x /**/ y )
+{
+  cout<< "2"<<endl;
+}
+/**/
+{
+  cout<<"3"<<endl;
 }
 
   return 0;
