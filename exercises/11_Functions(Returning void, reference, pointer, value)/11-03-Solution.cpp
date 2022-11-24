@@ -2,14 +2,15 @@
 
 using namespace std;
 
-int myFunction( int x)
-{
-return x + 5;
-
+void myFunction(){
+  cout << "I just executed!"<<endl;
 }
+int main (){
 
-int main ()
-{
- cout << myFunction(3)<<endl;
-   return 0;
+myFunction();
+myFunction();
+
+
+
+  return 0;
 }
